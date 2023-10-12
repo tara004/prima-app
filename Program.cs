@@ -3,7 +3,7 @@
 Auto miaAuto;
 
 miaAuto = new Auto();
-miaAuto.stampa();
+miaAuto.stampaDescrizione();
 
 // eserzio automobile
 class Auto
@@ -20,7 +20,7 @@ class Auto
     {
         this.marca = "Fiat";
         this.modello = "Punto";
-        this.colore = "Rosso";
+        this.colore = "Rosso"; 
         this.tipoMotore = motore.diesel;
     }
 
@@ -30,11 +30,23 @@ class Auto
     public string colore;
     public motore tipoMotore;
     
-    public void stampa() { 
-        Console.WriteLine("Marca: "+ this.marca);
-        Console.WriteLine("Modello: "+ this.modello);
-        Console.WriteLine("Motore: "+ this.tipoMotore);
-        Console.WriteLine("Colore: "+ this.colore);
+    public void stampaDescrizione()
+    {
+        Console.WriteLine(generaDescrizione());
+    }
+    public string generaDescrizione() {
+
+        //diciarazione variabili 
+        string result;
+
+        //constituisco il risultato le descrizioni 
+        result =  "Marca:   " + this.marca;
+        result += "\nModello: "+ this.modello;
+        result += "\nMotore:  "+ this.tipoMotore;
+        result += "\nColore:  "+ this.colore;
+
+        //restituisco il risultato
+        return result;
     }
     
 
