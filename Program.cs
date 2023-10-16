@@ -1,57 +1,19 @@
 ﻿// See https://aka.ms/new-console-template for more information
+using System.Diagnostics.SymbolStore;
+using System.Reflection.Metadata.Ecma335;
 
-Auto miaAuto;
+prima_app.AutoInterattiva miaAuto;
 
-miaAuto = new Auto();
-miaAuto.stampaDescrizione();
+miaAuto = new prima_app.AutoInterattiva();
 
-// eserzio automobile
-class Auto
-{
-    //tipi personallizati
-    public enum motore{
-        benzina,    //0
-        diesel,     //1
-        elettrico   //2
+miaAuto.StampaMenu();
 
-    }
+prima_app.Auto miaAuto2;
 
-    public Auto()
-    {
-        this.marca = "Fiat";
-        this.modello = "Punto";
-        this.colore = "Rosso"; 
-        this.tipoMotore = motore.diesel;
-    }
+//miaAuto2 = new prima_app.Auto();
 
-    // proprietà
-    public string marca;
-    public string modello;
-    public string colore;
-    public motore tipoMotore;
-    
-    public void stampaDescrizione()
-    {
-        Console.WriteLine(generaDescrizione());
-    }
-    public string generaDescrizione() {
+//miaAuto2.Accendi();
+//miaAuto2.StampaStato();
 
-        //diciarazione variabili 
-        string result;
-
-        //constituisco il risultato le descrizioni 
-        result =  "Marca:   " + this.marca;
-        result += "\nModello: "+ this.modello;
-        result += "\nMotore:  "+ this.tipoMotore;
-        result += "\nColore:  "+ this.colore;
-
-        //restituisco il risultato
-        return result;
-    }
-    
-
-    
-
-}
-
+Console.ReadLine();
 
